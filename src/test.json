@@ -1,0 +1,38 @@
+{
+  "name": "动态图表编辑测试",
+  "description": "",
+  "remark": "",
+  "subjectId": "08d86e95-1001-4dfc-8bc5-e852c945d778",
+  "themeType": 0,
+  "chartType": 0,
+  "dataType": 5,
+  "category": "data/dataSource/Name",
+  "categoryRender": [
+    "data",
+    "dataSource",
+    "Name"
+  ],
+  "categoryData": "XX1,XX2,XX3,XX4,XX5,XX6,XX7,XX8,XX9,XX10",
+  "chartsData": [
+    {
+      "chartId": "bd2e79d3-7a04-e807-dee0-44da20d6d243",
+      "name": "测试项1",
+      "nameBind": "",
+      "value": "[\"1500\",\"3600\",\"4100\",\"1600\",\"2315\",\"1956\",\"3198\",\"4156\",\"3754\",\"1652\"]",
+      "valueBind": [
+        "data",
+        "dataSource",
+        "Money"
+      ],
+      "id": "08d874d3-d950-408f-80ef-f3ab161b7257"
+    }
+  ],
+  "apiUrl": "",
+  "requestType": 0,
+  "dataLevel": "data/dataSource",
+  "dataLevelRender": [
+    "data",
+    "dataSource"
+  ],
+  "id": "bd2e79d3-7a04-e807-dee0-44da20d6d243"
+}

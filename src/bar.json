@@ -1,0 +1,16 @@
+{
+  "name": "动态柱状图",
+  "themeType": 20,
+  "chartType": 5,
+  "dataType": 5,
+  "categoryData": "XX1,XX2,XX3,XX4,XX5,XX6,XX7,XX8,XX9,XX10",
+  "chartsData": [
+    {
+      "chartId": "bd2e79d3-7a04-e807-dee0-44da20d6d243",
+      "name": "测试项1",
+      "value": "[\"1500\",\"3600\",\"4100\",\"1600\",\"2315\",\"1956\",\"3198\",\"4156\",\"3754\",\"1652\"]",
+      "id": "08d874d3-d950-408f-80ef-f3ab161b7257"
+    }
+  ],
+  "id": "bd2e79d3-7a04-e807-dee0-44da20d6d243"
+}

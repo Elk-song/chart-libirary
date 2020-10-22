@@ -1,0 +1,67 @@
+{
+  "name": "my-chart-demo",
+  "version": "1.1.5",
+  "private": false,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "pro": "vue-cli-service build --report",
+    "lint": "vue-cli-service lint",
+    "inspect": "vue-cli-service inspect",
+    "lib": "vue-cli-service build --target lib --name chart-test --dest lib ./src/packages/index.ts"
+  },
+  "main": "lib/chart-test.umd.min.js",
+  "typings": "types/index.d.ts",
+  "keywords": [
+    "chart-test"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@types/echarts": "^4.8.3",
+    "core-js": "^2.6.5",
+    "echarts": "^4.9.0",
+    "guid-typescript": "^1.0.9",
+    "my-chart-demo": "^1.1.4",
+    "vue": "^2.6.10",
+    "vue-class-component": "^7.0.2",
+    "vue-property-decorator": "^8.1.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.11.0",
+    "@vue/cli-plugin-typescript": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "compression-webpack-plugin": "^6.0.3",
+    "lint-staged": "^8.1.5",
+    "sass": "^1.18.0",
+    "sass-loader": "^7.1.0",
+    "typescript": "^3.4.3",
+    "uglifyjs-webpack-plugin": "^2.2.0",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "gitHooks": {
+    "pre-commit": "lint-staged"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  },
+  "files": [
+    "lib/**/*",
+    "types/*"
+  ]
+}
