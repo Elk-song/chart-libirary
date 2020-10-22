@@ -142,9 +142,9 @@ const externals = {
 }
 module.exports = {
   chainWebpack: config => {
-    config
-    .plugin('webpack-bundle-analyzer')
-    .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin)
+    // config
+    // .plugin('webpack-bundle-analyzer')
+    // .use(require('webpack-bundle-analyzer').BundleAnalyzerPlugin)
     // config.plugin("html").tap(args => {
     //   if (process.env.NODE_ENV === "production") {
     //     args[0].cdn = cdn;
