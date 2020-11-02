@@ -1,4 +1,4 @@
-import { EChartType, EChartDataType, EThemeType } from '@/core/constans/enum';
+import { EChartType, EThemeType } from '@/core/constans/enum';
 
 export interface IEntity<T> {
   id: T;
@@ -12,7 +12,7 @@ export interface ISelectBase<T> extends IBase<T> {
   selected: boolean;
 }
 
-export interface IBaseDesc<T> extends ISelectBase<T>, IEntity<string> {}
+export interface IBaseDesc<T> extends ISelectBase<T>, IEntity<string> { }
 
 export interface ITheme {
   version: number;
@@ -42,25 +42,20 @@ export interface IChartBase extends IEntity<string> {
   chartType: EChartType;
 }
 export interface IChartData extends IEntity<string> {
-  // 关联的图表的id
-  chartId: string;
   // 数据项名
   name: string;
-  // 数据项绑定字段
-  nameBind: string;
   // 数据
   value: string;
-  // 数据绑定字段
-  valueBind: string;
+}
+
+export interface IChartProperty<T> {
+  name: string;
+  value: T;
 }
 
 export interface IChart extends IChartBase {
-  // 数据绑定类型
-  dataType: EChartDataType;
-  // 类目项绑定字段
-  category: string;
   // 类目轴数据
   categoryData: string;
   // 数据项
-  chartsData: IChartData[];
+  data: IChartData[];
 }

@@ -1,5 +1,5 @@
 <template>
-  <div id="ms-bar"></div>
+  <div :id="idName"></div>
 </template>
 
 <script lang="ts">
@@ -19,6 +19,8 @@ export default class MsBar extends Vue {
   public width: number | string | undefined;
   @Prop()
   public height: number | string | undefined;
+  @Prop({ default: "ms-bar", type: String })
+  idName!: string;
   private chart: IChartManager = new ChartManager();
   get chartSize() {
     return { width: this.width, height: this.height };
@@ -26,7 +28,7 @@ export default class MsBar extends Vue {
   @Watch("chartsData", { deep: true })
   private WatchChartsData(_data: IChart) {
     typeof this.chart.chartInstance === "undefined" &&
-      this.chart.initInstance("ms-bar", _data.themeType, {
+      this.chart.initInstance(this.idName, _data.themeType, {
         width: this.width,
         height: this.height,
       });
@@ -34,7 +36,7 @@ export default class MsBar extends Vue {
       typeof this.chart.chartInstance !== "undefined" &&
       typeof _data !== "undefined"
     ) {
-      this.chart.changeTheme("ms-bar", _data.themeType, {
+      this.chart.changeTheme(this.idName, _data.themeType, {
         width: this.width,
         height: this.height,
       });
@@ -42,7 +44,7 @@ export default class MsBar extends Vue {
     }
   }
   private mounted() {
-    this.chart.initInstance("ms-bar", this.chartsData.themeType, {
+    this.chart.initInstance(this.idName, this.chartsData.themeType, {
       width: this.width,
       height: this.height,
     });
@@ -56,7 +58,7 @@ export default class MsBar extends Vue {
    * @param {IChart} _chartsData
    */
   private changeOption(_charts: ECharts, _chartsData: IChart) {
-    const data = this.filterStaticData(_chartsData.chartsData);
+    const data = this.filterStaticData(_chartsData.data);
     // 绘制图表
     _charts.setOption(
       {
