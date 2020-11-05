@@ -21,3 +21,8 @@ export enum ERequest {
   put = 10,
   delete = 15,
 }
+
+export enum EType {
+  bar = EChartType.MSBar,
+  line = EChartType.MSLine
+}

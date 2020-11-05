@@ -61,7 +61,20 @@ yarn add my-chart-demo // npm install my-chart-demo --save
 | **categoryData** |       string        |                   |        类目轴数据        |
 |  **chartsData**  | `Array<IChartData>` |                   |        数据项数据        |
 
-### 3. 例子
+### 3. 传递参数
+
+|      字段名      |          字段类型          |          备注          |
+| :--------------: | :------------------------: | :--------------------: |
+|      width       | `number| string|undefined` |       图表的宽度       |
+|      height      | `number|string|undefined`  |       图表的高度       |
+|      charts      |          `IChart`          |       图表的数据       |
+|      idName      |          `string`          |       图表的类名       |
+| devicePixelRatio |     `number|undefined`     |       设备像素比       |
+|     renderer     |     `string|undefined`     | 渲染方式  canvas\| svg |
+
+
+
+### 4. 例子
 
 + 1. main文件引入
 
@@ -72,9 +85,9 @@ yarn add my-chart-demo // npm install my-chart-demo --save
 
 + 2. 测试组件  **测试数据在项目中**
 
-     ![image-20201022152048800](https://picbucket-1301820142.cos.ap-shanghai.myqcloud.com/img/image-20201022152048800.png)
+     ![](https://picbucket-1301820142.cos.ap-shanghai.myqcloud.com/img/image-20201105141416927.png)
 
 生成图表：
 
-![image-20201022152114314](https://picbucket-1301820142.cos.ap-shanghai.myqcloud.com/img/image-20201022152114314.png)
+![](https://picbucket-1301820142.cos.ap-shanghai.myqcloud.com/img/image-20201105141043338.png)
 

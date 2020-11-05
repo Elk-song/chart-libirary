@@ -1,16 +1,24 @@
 <template>
   <div id="app">
-    <ms-line :width="600" :height="400" :chartsData="lineJson"></ms-line>
-    <ms-bar :width="600" :height="400" :chartsData="barJson"></ms-bar>
+    <MSBar
+      :width="600"
+      :height="400"
+      :charts="barJson"
+      :renderer="renderer"
+    ></MSBar>
   </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
+import MSBar from "./packages/ms-bar/MsBar.vue";
 @Component({
   name: "App",
+  components: {
+    MSBar,
+  },
 })
 export default class App extends Vue {
-  private lineJson = require("./line.json");
   private barJson = require("./bar.json");
+  private renderer: string = "svg";
 }
 </script>

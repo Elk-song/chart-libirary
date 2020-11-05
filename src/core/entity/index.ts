@@ -1,4 +1,5 @@
 import { EChartType, EThemeType } from '@/core/constans/enum';
+import _default from 'my-chart-demo';
 
 export interface IEntity<T> {
   id: T;
@@ -57,5 +58,19 @@ export interface IChart extends IChartBase {
   // 类目轴数据
   categoryData: string;
   // 数据项
-  data: IChartData[];
+  chartsData: IChartData[];
+}
+
+
+export class ChartOpts implements IChartOpts {
+  devicePixelRatio?: number;
+  renderer?: string = "canvas";
+  width?: number | string;
+  height?: number | string;
+  constructor(_width?: number | string, _height?: number | string, _render?: string, _devicePixelRatio?: number) {
+    this.width = _width;
+    this.height = _height;
+    this.renderer = _render;
+    this.devicePixelRatio = _devicePixelRatio;
+  }
 }
