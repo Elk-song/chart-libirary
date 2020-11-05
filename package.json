@@ -1,6 +1,6 @@
 {
   "name": "my-chart-demo",
-  "version": "1.1.15",
+  "version": "1.2.0",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",

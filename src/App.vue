@@ -1,20 +1,20 @@
 <template>
   <div id="app">
-    <MSBar
+    <ms-bar
       :width="600"
       :height="400"
       :charts="barJson"
       :renderer="renderer"
-    ></MSBar>
+    ></ms-bar>
   </div>
 </template>
 <script lang="ts">
 import { Component, Vue } from "vue-property-decorator";
-import MSBar from "./packages/ms-bar/MsBar.vue";
+import MsBar from "./packages/ms-bar/MsBar.vue";
 @Component({
   name: "App",
   components: {
-    MSBar,
+    MsBar,
   },
 })
 export default class App extends Vue {

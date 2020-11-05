@@ -132,12 +132,10 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const CompressionPlugin = require("compression-webpack-plugin");
 const cdn = {
   js: [
-    "https://cdn.jsdelivr.net/npm/vue",
     "https://cdn.bootcss.com/echarts/4.2.1/echarts.simple.min.js",
   ]
 }
 const externals = {
-  "vue": "Vue",
   "echarts": "echarts",
 }
 module.exports = {
