@@ -1,9 +1,9 @@
 import Vue from 'vue';
-import MsLine from './ms-line';
-import MsBar from "./ms-bar";
+import MSLine from './ms-line';
+import MSBar from "./ms-bar";
 const components: { [propsName: string]: any } = {
-  MsLine,
-  MsBar
+  MSLine,
+  MSBar
 };
 
 const install = (vue: typeof Vue): void => {

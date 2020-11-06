@@ -1,2 +1,2 @@
-import MsLine from './MsLine.vue';
-export default MsLine;
+import MSLine from './MsLine.vue';
+export default MSLine;

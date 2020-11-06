@@ -1,6 +1,6 @@
-import MsBar from "./MsBar.vue";
+import MSBar from "./MsBar.vue";
 
-(MsBar as any).install = function (Vue: any) {
-  Vue.component(MsBar.name, MsBar)
+(MSBar as any).install = function (Vue: any) {
+  Vue.component(MSBar.name, MSBar)
 }
-export default MsBar;
+export default MSBar;

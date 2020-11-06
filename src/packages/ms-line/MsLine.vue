@@ -21,7 +21,7 @@ import { EChartType } from "@/core/constans/enum";
 @Component({
   name: "MSLine",
 })
-export default class MsLine extends Mixins(PropMixins) {
+export default class MSLine extends Mixins(PropMixins) {
   @Watch("charts", { deep: true })
   private WatchChartsData(_data: IChart) {
     typeof this.chartManager.chartInstance === "undefined" &&
